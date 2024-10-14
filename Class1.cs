@@ -32,7 +32,7 @@ namespace Tools
 
                 Ed.Editor ed = dm.MdiActiveDocument.Editor;
 
-                string sCom = "PRPR_backdwg" + "Бэкап dwg-файла";
+                string sCom = "PRPR_backdwg - Бэкап dwg-файла";
                 ed.WriteMessage(sCom);
 
 #if DEBUG
@@ -77,8 +77,8 @@ namespace Tools
             //string fName = db.Filename; // Альтернативный метод получения полного пути и имени текущего dwg-файла
            
             string dwgName = doc.Name; // метод получения полного пути и имени текущего dwg-файла
-            int pos = dwgName.LastIndexOf("\\");
-            string dwgPath = dwgName.Remove(pos, dwgName.Length - pos);
+            int pos = dwgName.LastIndexOf("\\"); // позиция последнего слеша в полном пути до файла
+            string dwgPath = dwgName.Remove(pos, dwgName.Length - pos); // Путь до dwg файла (без имени файла)
             string[] dwgSplitName = dwgName.Split(new char[] { '.' }); // Отделение расширения *.dwg от полного имени файла
             string timeNow = DateTime.Now.ToString().Replace(':', '-'); // Замена двоеточий в формате времени на дефисы
             string dwgNewName = dwgSplitName[0] + "_back_" + RevisionValue + "_" + timeNow + ".dwg"; // Сборка итоговой полной строки с путем к файлу с новым именем
@@ -89,10 +89,10 @@ namespace Tools
 
             if (File.Exists(dwgNewName))
             {
-                MessageBox.Show("Резервная копия успешно создана!");
+                MessageBox.Show("Резервная копия успешно создана!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else { 
-                MessageBox.Show("Ошибка создания файла!", "Ошибка!"); 
+                MessageBox.Show("Ошибка создания файла!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
                 
 }
