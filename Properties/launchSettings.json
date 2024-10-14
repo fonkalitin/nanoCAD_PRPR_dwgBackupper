@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "NanoFirst": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Program Files\\Nanosoft\\nanoCAD x64 23.1\\nCadS.exe -g \"C:\\Users\\fonka\\source\\repos\\NanoFirst\\bin\\x64\\Debug\\net6.0\\NanoFirst.dll\"",
+      "workingDirectory": "C:\\Program Files\\Nanosoft\\nanoCAD x64 23.1\\bin"
+    }
+  }
+}

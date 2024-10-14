@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+	  <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
+    <OutputType>Library</OutputType>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="hostdbmgd">
+      <HintPath>E:\Soft\_NanoDev\NC_SDK_RU_24.0.6377.4326.7134\include-x64\hostdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="hostmgd">
+      <HintPath>E:\Soft\_NanoDev\NC_SDK_RU_24.0.6377.4326.7134\include-x64\hostmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="imapimgd">
+      <HintPath>E:\Soft\_NanoDev\NC_SDK_RU_24.0.6377.4326.7134\include-x64\imapimgd.dll</HintPath>
+    </Reference>
+    <Reference Include="MapiBaseTypes">
+      <HintPath>E:\Soft\_NanoDev\NC_SDK_RU_24.0.6377.4326.7134\include-x64\mapibasetypes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mapimgd">
+      <HintPath>E:\Soft\_NanoDev\NC_SDK_RU_24.0.6377.4326.7134\include-x64\mapimgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+	
+
+</Project>
